@@ -14,11 +14,11 @@ public class JitterManager {
     }
 
     public static float getJitterX() {
-        return jitterX / (float)MinecraftClient.getInstance().getWindow().getFramebufferWidth();
+        return jitterX / (float) MinecraftClient.getInstance().getWindow().getFramebufferWidth();
     }
 
     public static float getJitterY() {
-        return jitterY / (float)MinecraftClient.getInstance().getWindow().getFramebufferHeight();
+        return jitterY / (float) MinecraftClient.getInstance().getWindow().getFramebufferHeight();
     }
 
     private static float halton(int index, int base) {
