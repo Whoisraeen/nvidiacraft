@@ -5,7 +5,8 @@
 	"mixins": [
 		"ExampleMixin",
 		"GameRendererMixin",
-		"MinecraftClientMixin"
+		"MinecraftClientMixin",
+		"IrisPipelineMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
