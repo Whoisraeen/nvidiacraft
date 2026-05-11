@@ -24,5 +24,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 
 # For Windows, Streamline libraries would be linked here
 if(WIN32)
-    # target_link_libraries(${PROJECT_NAME} PRIVATE ${STREAMLINE_DIR}/lib/x64/sl.interposer.lib)
+    link_directories(${STREAMLINE_DIR}/lib/x64)
+    target_link_libraries(${PROJECT_NAME} PRIVATE sl.interposer)
 endif()
