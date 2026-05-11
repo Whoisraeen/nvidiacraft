@@ -34,4 +34,5 @@ public class NativeLoader {
     public static native void nativeUpdateMatrices(float[] modelView, float[] projection);
     public static native void nativeSetDepthBuffer(long glTextureId);
     public static native void nativeSetColorBuffer(long glTextureId);
+    public static native void nativeEvaluateDLSS();
 }
