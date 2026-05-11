@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "nvidiacraft",
+	"version": "${version}",
+	"name": "Nvidiacraft",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"whoisraeen"
+	],
+	"contact": {
+		"homepage": "https://github.com/whoisraeen/nvidiacraft",
+		"sources": "https://github.com/whoisraeen/nvidiacraft"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/nvidiacraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.raeen.Nvidiacraft"
+		],
+		"client": [
+			"net.raeen.client.NvidiacraftClient"
+		]
+	},
+	"mixins": [
+		"nvidiacraft.mixins.json",
+		{
+			"config": "nvidiacraft.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

@@ -1,0 +1,3 @@
+[submodule "src/native/third_party/Streamline"]
+	path = src/native/third_party/Streamline
+	url = https://github.com/NVIDIA-RTX/Streamline.git
