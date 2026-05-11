@@ -8,7 +8,6 @@ group = project.maven_group
 
 repositories {
 	maven { url = "https://api.modrinth.com/maven" }
-	maven { url = "https://maven.irisshaders.net/repositories/releases" }
 }
 
 loom {
@@ -32,9 +31,9 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 	
-	// Rendering dependencies
-	modImplementation "maven.modrinth:sodium:mc1.21-0.6.0-beta.1"
-	modImplementation "maven.modrinth:iris:1.8.0-beta.2+1.21"
+	// Rendering dependencies (temporarily commented out due to resolution issues)
+	// modImplementation "maven.modrinth:sodium:0.8.11+mc1.21.11"
+	// modImplementation "maven.modrinth:iris:1.10.7+mc1.21.11"
 }
 
 task configureNative(type: Exec) {
