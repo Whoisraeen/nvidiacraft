@@ -1,5 +1,5 @@
 plugins {
-	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+	id 'fabric-loom' version "${loom_version}"
 	id 'maven-publish'
 }
 
@@ -8,6 +8,9 @@ group = project.maven_group
 
 repositories {
 	maven { url = "https://api.modrinth.com/maven" }
+	flatDir {
+		dirs 'run/mods'
+	}
 }
 
 loom {
@@ -19,7 +22,6 @@ loom {
 			sourceSet sourceSets.client
 		}
 	}
-
 }
 
 dependencies {
@@ -31,9 +33,9 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 	
-	// Rendering dependencies (temporarily commented out due to resolution issues)
-	// modImplementation "maven.modrinth:sodium:0.8.11+mc1.21.11"
-	// modImplementation "maven.modrinth:iris:1.10.7+mc1.21.11"
+	// Rendering dependencies (resolved from local run/mods folder)
+	modImplementation name: "sodium-fabric-0.8.11+mc1.21.11"
+	modImplementation name: "iris-fabric-1.10.7+mc1.21.11"
 }
 
 task configureNative(type: Exec) {
